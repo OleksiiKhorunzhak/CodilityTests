@@ -16,14 +16,14 @@ namespace UiTests
 		private static string password = "password";
 		// Create a main test page url
 		private static string url = "https://codility-frontend-prod.s3.amazonaws.com/media/task_static/qa_csharp_login_page/9a83bda125cd7398f9f482a3d6d45ea4/static/attachments/reference_page.html";
-		// Create a driver instance for chromedriver
-		private static IWebDriver driver = new ChromeDriver();
 
 		public static void Main(string[] args)
 		{
 			[Test]
 			void testLoginFormPresent()
 			{
+				// Create a driver instance for chromedriver
+				IWebDriver driver = new ChromeDriver();
 				//Navigate to main test page
 				driver.Navigate().GoToUrl(url);
 				//Maximize the window
@@ -44,6 +44,9 @@ namespace UiTests
 			[Test]
 			void testValidCredential()
 			{
+				// Create a driver instance for chromedriver
+				IWebDriver driver = new ChromeDriver();
+
 				// Create a valid text message
 				string expectedText = "Welcome to Codility";
 
@@ -79,6 +82,8 @@ namespace UiTests
 			{
 				string expectedText = "You shall not pass! Arr!";
 
+				// Create a driver instance for chromedriver
+				IWebDriver driver = new ChromeDriver();
 				//Navigate to google page
 				driver.Navigate().GoToUrl(url);
 				//Maximize the window
@@ -111,6 +116,8 @@ namespace UiTests
 			{
 				string expectedText = "Enter a valid email";
 
+				// Create a driver instance for chromedriver
+				IWebDriver driver = new ChromeDriver();
 				//Navigate to google page
 				driver.Navigate().GoToUrl(url);
 				//Maximize the window
@@ -144,6 +151,8 @@ namespace UiTests
 				string expectedText = "Email is required";
 				string expectedText2 = "Email is required";
 
+				// Create a driver instance for chromedriver
+				IWebDriver driver = new ChromeDriver();
 				//Navigate to google page
 				driver.Navigate().GoToUrl(url);
 				//Maximize the window
